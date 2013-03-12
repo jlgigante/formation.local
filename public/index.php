@@ -44,4 +44,10 @@ $user = [
 //proction de variable
 echo "Bonjour {$user['firstName']} !";
 
-
+//pour contrer les limites du nb de caractères dans les conventions PSR (80) et autre
+//heredoc "SQL"
+//n'accepte pas les const 
+$query = <<< SQL
+SELECT * FORM user 
+WHERE id = 1
+SQL;
